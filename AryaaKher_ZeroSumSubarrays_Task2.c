@@ -7,7 +7,7 @@ void findZeroSumSubarrays(int arr[], int n) {
         int sum = 0;
         for (int j = i; j < n; j++) {
             sum += arr[j];
-            if (sum == 0) {  // Corrected the condition here
+            if (sum == 0) {
                 found = 1;
                 for (int k = i; k <= j; k++) {
                     printf("%d ", arr[k]);
@@ -28,7 +28,7 @@ int main() {
     printf("Enter the size of the array: ");
     scanf("%d", &n);
 
-    int arr[n];  // VLA: be cautious with non-standard compilers
+    int arr[n];
 
     printf("Enter the elements of the array:\n");
     for (int i = 0; i < n; i++) {
